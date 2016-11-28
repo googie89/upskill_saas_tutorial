@@ -22,7 +22,7 @@ h1, h2, h3 {
 }
 
 .navbar, .home-callout {
-  // Gradiant provided by @_ighosh at uiGradients.com
+  /* Gradiant provided by @_ighosh at uiGradients.com */
   background: #DA22FF; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, 0 0, 100% 0, from(#DA22FF), to(#9733EE));
   background: -webkit-linear-gradient(to left, #DA22FF, #9733EE);
@@ -34,6 +34,25 @@ h1, h2, h3 {
 .navbar{
   border: none;
 }
+
+.navbar-default .navbar-brand {
+  color:white;
+}
+
+.navbar-default .navbar-brand:hover {
+  color:white;
+  opacity: 0.75;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color:white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color:white;
+  opacity: 0.75;
+}
+
 
 .home-callout{
   color: white;
