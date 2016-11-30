@@ -6,8 +6,8 @@ class ContactsController < ApplicationController
     def create
       @contact = Contact.new(contact_params)
       if @contact.save
+        ContactMailer.contact_email(@contact.name, @contact.email, @contact.comments).deliver
         flash[:success] = "Message sent."
-        ContactMailer.contact_email(@contact.name, @contact.email, @contact.comments)
       else
          flash[:error] = @contact.errors.full_messages.join(", ")
       end
