@@ -34,7 +34,11 @@
     
     <div class='container'>
       <% flash.each do |type, msg| %>
-        <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+          <% if type == "error" %>
+            <% type = "danger" %>
+          <% end %>
+          
+          <%= content_tag :div, msg, class: "alert alert-#{type}", role: "alert" %>
       <% end %>
     </div>
     <%= yield %>
