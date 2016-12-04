@@ -4,6 +4,10 @@ require_relative 'application'
 # Initialize the Rails application.
 Rails.application.initialize!
 
+config.action_mailer.default_options = {
+  from: "contact@vast-plains-91393.herokuapp.com"
+}
+
 ActionMailer::Base.smtp_settings = {
   :port           => ENV['MAILGUN_SMTP_PORT'],
   :from           => "contact@vast-plains-91393.herokuapp.com",
